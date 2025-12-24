@@ -1,24 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
+import LandingPage from "./pages/landingPage";
+import BlogPage from "./pages/blogPage";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav style={{ padding: "1rem", borderBottom: "1px solid #ccc" }}>
+        <Link to="/" style={{ marginRight: "1rem" }}>Home</Link>
+        <Link to="/blog">Blog</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+      </Routes>
     </div>
   );
 }
