@@ -4,6 +4,9 @@
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-card:hover {
@@ -29,6 +32,7 @@
 }
 
 .blog-link {
+    margin-top: auto;
     color: #0070f3;
     text-decoration: none;
     font-weight: 600;
